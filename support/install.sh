@@ -62,7 +62,7 @@ tmp=$(mktemp -d /tmp/garden-install.XXXXXX)
 )
 
 (
-  GARDEN_DIR=${HOME}/.garden
+  GARDEN_DIR=${GARDEN_DIR:-$HOME/.garden}
   TARGET_PATH=${GARDEN_DIR}/bin
 
   echo "→ Extracting to ${TARGET_PATH}..."
